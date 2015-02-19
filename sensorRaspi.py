@@ -83,7 +83,8 @@ def reading(sensor):
         distance = timepassed * 17000
   # return the distance of an object in front of the sensor in cm
         consumido = distance * 35
-        volumen = (consumido *100) / 1500
+        volumen = 100 - ((consumido * 100) / 15000)
+
        
         campos = urllib.urlencode({"petId": "1", "waterLevel":volumen})
   #write the address to api in ""
